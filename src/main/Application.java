@@ -3,14 +3,13 @@ package main;
 public class Application {
 
 	public static void main(String[] args) {
+		Sequence sequence = new Sequence();
 		
-		Task taskRunner = new Task();
-		taskRunner.start();
+		Worker worker1 = new Worker (sequence);
+		worker1.start();
 		
-		System.out.println("hello world...");
-
-		Task taskRunner2 = new Task();
-		taskRunner2.start();
+		Worker worker2 = new Worker (sequence);
+		worker2.start();
 	}
 
 }
